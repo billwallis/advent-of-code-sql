@@ -3,7 +3,7 @@ revision = 1
 requires-python = ">=3.11"
 
 [[package]]
-name = "advent-of-code"
+name = "advent-of-code-sql"
 version = "0.0.0"
 source = { editable = "." }
 dependencies = [
