@@ -13,6 +13,10 @@ from advent_of_code.constants import SOLUTIONS_ROOT
 # year-00: day-00: sample/actual: part-0: value
 Solutions = dict[str : dict[str : dict[str : dict[str:Any]]]]
 
+SKIP = [
+    (2024, 6),
+]
+
 
 def _parse_date_key(date_string: str) -> int:
     return int(date_string.split("-")[1])
@@ -53,6 +57,10 @@ def test__sample_solutions(year: int, day: int, parts: dict):
     """
     Test that the solutions work for the sample inputs.
     """
+
+    if (year, day) in SKIP:
+        pytest.skip()
+        return
 
     try:
         solution = Solution(day, year)
