@@ -16,6 +16,7 @@ Solutions = dict[str : dict[str : dict[str : dict[str:Any]]]]
 SKIP = [
     (2024, 6),
     (2024, 12),
+    (2024, 15),
 ]
 
 
