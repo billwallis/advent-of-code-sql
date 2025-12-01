@@ -2,7 +2,7 @@
 Tests for the Advent of Code solutions.
 """
 
-from typing import Any
+from typing import Any, TypeAlias
 
 import pytest
 import yaml
@@ -11,14 +11,7 @@ from advent_of_code import Solution
 from advent_of_code.constants import SOLUTIONS_ROOT
 
 # year-00: day-00: sample/actual: part-0: value
-Solutions = dict[str : dict[str : dict[str : dict[str:Any]]]]
-
-SKIP = [
-    (2024, 6),
-    (2024, 12),
-    (2024, 15),
-    (2024, 16),
-]
+Solutions: TypeAlias = dict[str, dict[str, dict[str, dict[str, Any]]]]
 
 
 def _parse_date_key(date_string: str) -> int:
@@ -61,9 +54,10 @@ def test__sample_solutions(year: int, day: int, parts: dict):
     Test that the solutions work for the sample inputs.
     """
 
-    if (year, day) in SKIP:
-        pytest.skip()
-        return
+    match (year, day):
+        case (2024, _):
+            pytest.skip()
+            return
 
     try:
         solution = Solution(day, year)
