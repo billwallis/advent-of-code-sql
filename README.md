@@ -29,7 +29,7 @@ This project uses:
 ```shell
 # Setup
 uv sync --all-groups
-pre-commit install --with-hooks
+pre-commit install --install-hooks
 
 # Use the CLI
 aoc --help
