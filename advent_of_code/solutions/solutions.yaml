@@ -546,7 +546,7 @@ solutions:
     day-02:
       sample:
         part-1: 1227775554
-        part-2:
+        part-2: 4174379265
       actual:
         part-1: 30323879646
-        part-2:
+        part-2: 43872163557
