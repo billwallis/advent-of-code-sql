@@ -23,7 +23,7 @@ joltage(bank_id, joltage, current_battery_id, i) as (
         select bank_id, battery, battery_id, 1
         from banks
     union all
-        select distinct
+        select
             joltage.bank_id,
             concat(joltage.joltage, banks.battery) as joltage_,
             banks.battery_id,
