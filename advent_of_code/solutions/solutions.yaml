@@ -553,7 +553,7 @@ solutions:
     day-03:
       sample:
         part-1: 357
-        part-2:
+        part-2: 3121910778619
       actual:
         part-1: 16812
-        part-2:
+        part-2: 166345822896410
