@@ -6,10 +6,10 @@ input(content) as (
 ),
 
 /*
-    Rows increment to the right (->)
-    Columns increment down (v)
+    Columns increment to the right (->)
+    Rows increment down (v)
 */
-search_directions(direction, row_i, col_i) as (
+search_directions(direction, col_i, row_i) as (
     values
         ('east',        1,  0),
         ('south-east',  1,  1),
