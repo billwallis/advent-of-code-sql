@@ -564,3 +564,10 @@ solutions:
       actual:
         part-1: 1587
         part-2: 8946
+    day-05:
+      sample:
+        part-1: 3
+        part-2:
+      actual:
+        part-1: 643
+        part-2:
