@@ -567,7 +567,7 @@ solutions:
     day-05:
       sample:
         part-1: 3
-        part-2:
+        part-2: 14
       actual:
         part-1: 643
-        part-2:
+        part-2: 342018167474526
