@@ -1,8 +1,8 @@
 with
 
-input(data) as (
-    select *
-    from read_csv('advent_of_code/solutions/year_2020/day_01/sample.data', header=false)
+input(content) as (
+    select content.rtrim(e'\n')
+    from read_text('advent_of_code/solutions/year_2020/day_01/sample.data')
 )
 
 from input

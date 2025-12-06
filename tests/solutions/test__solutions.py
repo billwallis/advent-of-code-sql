@@ -10,7 +10,7 @@ import yaml
 from advent_of_code import Solution
 from advent_of_code.constants import SOLUTIONS_ROOT
 
-# year-00: day-00: sample/actual: part-0: value
+# year-XXXX: day-XX: part-X: sample/actual: value
 Solutions: TypeAlias = dict[str, dict[str, dict[str, dict[str, Any]]]]
 
 
@@ -34,12 +34,12 @@ def _year_day_parts(solutions: Solutions) -> list[tuple[int, int, dict]]:
 
     cases = []
     for year, days in solutions.items():
-        for day, sample_or_actual in days.items():
+        for day, parts in days.items():
             cases.append(
                 (
                     _parse_date_key(year),
                     _parse_date_key(day),
-                    sample_or_actual["sample"],
+                    parts,
                 )
             )
     return cases
@@ -57,14 +57,12 @@ def test__sample_solutions(year: int, day: int, parts: dict):
     match (year, day):
         case (2024, _):
             pytest.skip()
-            return
 
     try:
         solution = Solution(day, year)
     except ModuleNotFoundError:
         pytest.skip()
-        return
 
     actual = solution.solve(use_sample=True)
-    assert actual[0] == parts["part-1"]
-    assert actual[1] == parts["part-2"]
+    assert actual[0] == parts["part-1"]["sample"]
+    assert actual[1] == parts["part-2"]["sample"]
