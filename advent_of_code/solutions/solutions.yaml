@@ -574,7 +574,7 @@ solutions:
     day-06:
       sample:
         part-1: 4277556
-        part-2:
+        part-2: 3263827
       actual:
         part-1: 4405895212738
-        part-2:
+        part-2: 7450962489289
