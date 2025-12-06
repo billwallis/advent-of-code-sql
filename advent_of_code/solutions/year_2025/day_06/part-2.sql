@@ -31,69 +31,41 @@ problem_ids as (
 ),
 
 problem_metadata as (
-    from (
-        select
-            problem_ids.problem_id,
-            problem_ids.operator,
-            lines.line_id,
-            /* Reset the character ID for each problem */
-            row_number() over (
-                partition by problem_ids.problem_id, lines.line_id
-                order by lines.char_id
-            ) as char_id,
-            lines.char,
-        from lines
-            inner join problem_ids
-                using (char_id)
-        where lines.line_id != lines.max_line_id
-    )
     select
-        *,
-        max(char_id) over (partition by problem_id) as max_char_id,
+        problem_ids.problem_id,
+        problem_ids.operator,
+        lines.line_id,
+        /* Reset the character ID for each problem */
+        row_number() over (
+            partition by problem_ids.problem_id, lines.line_id
+            order by lines.char_id
+        ) as char_id,
+        lines.char,
+    from lines
+        inner join problem_ids
+            using (char_id)
+    where lines.line_id != lines.max_line_id
 ),
 
-problems(problem_id, max_i, i, item) as (
-        select distinct problem_id, max_char_id, 1, '' from problem_metadata
-    union all
-        select
-            problems.problem_id,
-            any_value(problems.max_i),
-            any_value(problems.i) + 1,
-            string_agg(
-                problem_metadata.char,
-                '' order by problem_metadata.line_id
-            ) as item
-        from problems
-            inner join problem_metadata
-                on  problems.problem_id = problem_metadata.problem_id
-                and problems.i = problem_metadata.char_id
-        where problems.i <= problems.max_i
-        group by problems.problem_id
-),
+problems as (
+    select
+        problem_id,
+        any_value(operator) as operator,
+        string_agg(char, '' order by line_id).trim() as item
+    from problem_metadata
+    group by problem_id, char_id
+    having item != ''
+)
 
-solutions as (
-    from (
-        select
-            problem_id,
-            item::bigint as item,
-            (
-                select operator
-                from problem_metadata
-                where problems.problem_id = problem_metadata.problem_id
-                limit 1
-            ) as operator,
-        from problems
-        where item.trim() != ''
-    )
+from (
     select
         problem_id,
         case any_value(operator)
-            when '*' then product(item)
-            when '+' then sum(item)
+            when '*' then product(item::bigint)
+            when '+' then sum(item::bigint)
         end as solution
+    from problems
     group by problem_id
 )
-
 select sum(solution)::bigint as grand_total
-from solutions
 ;
