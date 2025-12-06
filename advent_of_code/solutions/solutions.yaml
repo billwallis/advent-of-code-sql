@@ -571,3 +571,10 @@ solutions:
       actual:
         part-1: 643
         part-2: 342018167474526
+    day-06:
+      sample:
+        part-1: 4277556
+        part-2:
+      actual:
+        part-1: 4405895212738
+        part-2:
