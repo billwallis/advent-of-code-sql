@@ -98,7 +98,7 @@ solutions:
         actual: 5208
       part-2:
         sample: 140
-        actual: null
+        actual:
     day-14:
       part-1:
         sample: 24
@@ -112,77 +112,77 @@ solutions:
         actual: 4919281
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-16:
       part-1:
         sample: 1651
         actual: 1767
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-17:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-18:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-19:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-20:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-21:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-22:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-23:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-24:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-25:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
   year-2023:
     day-01:
       part-1:
@@ -218,7 +218,7 @@ solutions:
         actual: 174137457
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-06:
       part-1:
         sample: 288
@@ -229,136 +229,136 @@ solutions:
     day-07:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-08:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-09:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-10:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-11:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-12:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-13:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-14:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-15:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-16:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-17:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-18:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-19:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-20:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-21:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-22:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-23:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-24:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-25:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
   year-2024:
     day-01:
       part-1:
@@ -401,7 +401,7 @@ solutions:
         actual: 4374
       part-2:
         sample: 6
-        actual: null
+        actual:
     day-07:
       part-1:
         sample: 3749
@@ -422,7 +422,7 @@ solutions:
         actual: 6356833654075
       part-2:
         sample: 2858
-        actual: null
+        actual:
     day-10:
       part-1:
         sample: 36
@@ -436,14 +436,14 @@ solutions:
         actual: 216996
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-12:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-13:
       part-1:
         sample: 480
@@ -461,38 +461,38 @@ solutions:
     day-15:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-16:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-17:
       part-1:
         sample: 4,6,3,5,6,3,5,2,1,0
         actual: 2,7,2,5,1,2,7,3,7
       part-2:
         sample: 117440
-        actual: null
+        actual:
     day-18:
       part-1:
         sample: 22
         actual: 432
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-19:
       part-1:
         sample: 6
         actual: 258
       part-2:
         sample: 16
-        actual: null
+        actual:
     day-20:
       part-1:
         sample: 0
@@ -503,10 +503,10 @@ solutions:
     day-21:
       part-1:
         sample: 0
-        actual: null
+        actual:
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-22:
       part-1:
         sample: 37327623
@@ -527,14 +527,14 @@ solutions:
         actual: 57270694330992
       part-2:
         sample: 0
-        actual: null
+        actual:
     day-25:
       part-1:
         sample: 3
         actual: 2840
       part-2:
         sample: 0
-        actual: null
+        actual:
   year-2025:
     day-01:
       part-1:
