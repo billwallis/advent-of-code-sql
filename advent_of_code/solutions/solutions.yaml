@@ -578,3 +578,10 @@ solutions:
       part-2:
         sample: 3263827
         actual: 7450962489289
+    day-07:
+      part-1:
+        sample: 21
+        actual: 1581
+      part-2:
+        sample: 40
+        actual: 73007003089792
