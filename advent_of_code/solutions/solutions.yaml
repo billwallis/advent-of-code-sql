@@ -583,5 +583,5 @@ solutions:
         sample: 21
         actual: 1581
       part-2:
-        sample:
-        actual:
+        sample: 40
+        actual: 73007003089792
