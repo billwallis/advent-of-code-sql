@@ -585,3 +585,10 @@ solutions:
       part-2:
         sample: 40
         actual: 73007003089792
+    day-08:
+      part-1:
+        sample: 40
+        actual: 102816
+      part-2:
+        sample: 25272
+        actual: 100011612
