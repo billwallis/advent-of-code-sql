@@ -590,5 +590,5 @@ solutions:
         sample: 40
         actual: 102816
       part-2:
-        sample:
-        actual:
+        sample: 25272
+        actual: 100011612
