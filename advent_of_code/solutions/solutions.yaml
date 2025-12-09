@@ -592,3 +592,10 @@ solutions:
       part-2:
         sample: 25272
         actual: 100011612
+    day-09:
+      part-1:
+        sample: 50
+        actual: 4759420470
+      part-2:
+        sample:
+        actual:
