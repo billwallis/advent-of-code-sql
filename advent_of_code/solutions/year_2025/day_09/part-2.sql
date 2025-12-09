@@ -164,7 +164,90 @@ from squares
     semi join bounded_vertices as v_rr on squares.p_rr = v_rr.p
     semi join bounded_vertices as v_lr on squares.p_lr = v_lr.p
     semi join bounded_vertices as v_rl on squares.p_rl = v_rl.p
+where 1=1
+    /* No edges intersect the perimeter */
+    and not exists(
+        from edges
+        where if(
+            squares.p_ll.x = squares.p_lr.x,
+            (1=1
+                and edges.axis = 'y'
+                and squares.p_ll.x > least(edges.v1.x, edges.v2.x)
+                and squares.p_ll.x < greatest(edges.v1.x, edges.v2.x)
+                and edges.axis_coord > least(squares.p_ll.y, squares.p_lr.y)
+                and edges.axis_coord < greatest(squares.p_ll.y, squares.p_lr.y)
+            ),
+            (1=1
+                and edges.axis = 'x'
+                and squares.p_ll.y > least(edges.v1.y, edges.v2.y)
+                and squares.p_ll.y < greatest(edges.v1.y, edges.v2.y)
+                and edges.axis_coord > least(squares.p_ll.x, squares.p_lr.x)
+                and edges.axis_coord < greatest(squares.p_ll.x, squares.p_lr.x)
+            )
+        )
+    )
+    and not exists(
+        from edges
+        where if(
+            squares.p_ll.x = squares.p_rl.x,
+            (1=1
+                and edges.axis = 'y'
+                and squares.p_ll.x > least(edges.v1.x, edges.v2.x)
+                and squares.p_ll.x < greatest(edges.v1.x, edges.v2.x)
+                and edges.axis_coord > least(squares.p_ll.y, squares.p_rl.y)
+                and edges.axis_coord < greatest(squares.p_ll.y, squares.p_rl.y)
+            ),
+            (1=1
+                and edges.axis = 'x'
+                and squares.p_ll.y > least(edges.v1.y, edges.v2.y)
+                and squares.p_ll.y < greatest(edges.v1.y, edges.v2.y)
+                and edges.axis_coord > least(squares.p_ll.x, squares.p_rl.x)
+                and edges.axis_coord < greatest(squares.p_ll.x, squares.p_rl.x)
+            )
+        )
+    )
+    and not exists(
+        from edges
+        where if(
+            squares.p_rr.x = squares.p_lr.x,
+            (1=1
+                and edges.axis = 'y'
+                and squares.p_rr.x > least(edges.v1.x, edges.v2.x)
+                and squares.p_rr.x < greatest(edges.v1.x, edges.v2.x)
+                and edges.axis_coord > least(squares.p_rr.y, squares.p_lr.y)
+                and edges.axis_coord < greatest(squares.p_rr.y, squares.p_lr.y)
+            ),
+            (1=1
+                and edges.axis = 'x'
+                and squares.p_rr.y > least(edges.v1.y, edges.v2.y)
+                and squares.p_rr.y < greatest(edges.v1.y, edges.v2.y)
+                and edges.axis_coord > least(squares.p_rr.x, squares.p_lr.x)
+                and edges.axis_coord < greatest(squares.p_rr.x, squares.p_lr.x)
+            )
+        )
+    )
+    and not exists(
+        from edges
+        where if(
+            squares.p_rr.x = squares.p_rl.x,
+            (1=1
+                and edges.axis = 'y'
+                and squares.p_rr.x > least(edges.v1.x, edges.v2.x)
+                and squares.p_rr.x < greatest(edges.v1.x, edges.v2.x)
+                and edges.axis_coord > least(squares.p_rr.y, squares.p_rl.y)
+                and edges.axis_coord < greatest(squares.p_rr.y, squares.p_rl.y)
+            ),
+            (1=1
+                and edges.axis = 'x'
+                and squares.p_rr.y > least(edges.v1.y, edges.v2.y)
+                and squares.p_rr.y < greatest(edges.v1.y, edges.v2.y)
+                and edges.axis_coord > least(squares.p_rr.x, squares.p_rl.x)
+                and edges.axis_coord < greatest(squares.p_rr.x, squares.p_rl.x)
+            )
+        )
+    )
 ;
 
 
 -- 4600181596 is too high  ["{x=15543, y=83949}","{x=83871, y=16626}","{x=15543, y=16626}","{x=83871, y=83949}"]
+--  176823432 is too low   ["{x=2032, y=50331}","{x=94803, y=48426}","{x=2032, y=48426}","{x=94803, y=50331}"]
