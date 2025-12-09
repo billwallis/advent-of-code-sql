@@ -597,5 +597,5 @@ solutions:
         sample: 50
         actual: 4759420470
       part-2:
-        sample:
+        sample: 24
         actual:
