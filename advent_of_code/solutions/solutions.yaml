@@ -606,3 +606,10 @@ solutions:
       part-2:
         sample:
         actual:
+    day-11:
+      part-1:
+        sample: 5
+        actual: 719
+      part-2:
+        sample:
+        actual:
