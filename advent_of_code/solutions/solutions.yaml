@@ -599,3 +599,10 @@ solutions:
       part-2:
         sample: 24
         actual:
+    day-10:
+      part-1:
+        sample: 7
+        actual:
+      part-2:
+        sample:
+        actual:
