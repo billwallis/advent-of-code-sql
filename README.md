@@ -42,3 +42,13 @@ AOC_SESSION_COOKIE="session=..."
 ```
 
 You can find the session cookie in your browser's developer tools after logging in to Advent of Code.
+
+## Similar projects
+
+Several other folks have been solving the Advent of Code problems with SQL, check them out too!
+
+- https://github.com/DBatUTuebingen/Advent_of_Code
+- https://github.com/LennartH/advent-of-code
+- https://github.com/neumannt/aoc24
+- https://github.com/anthonywritescode/aoc2025
+- https://clickhouse.com/blog/clickhouse-advent-of-code-2025
