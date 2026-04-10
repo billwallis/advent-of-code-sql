@@ -38,7 +38,7 @@ packages = ["advent_of_code"]
 
 
 [tool.uv]
-required-version = ">=0.7,<1.0"
+required-version = ">=0.8"
 default-groups = "all"
 
 
