@@ -1,10 +1,9 @@
 <span align="center">
 
-[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![Python](https://img.shields.io/badge/Python-3.13+-blue.svg)](https://www.python.org/downloads/)
 [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
 [![tests](https://github.com/billwallis/advent-of-code-sql/actions/workflows/tests.yaml/badge.svg)](https://github.com/billwallis/advent-of-code-sql/actions/workflows/tests.yaml)
 
-[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/billwallis/advent-of-code-sql/main.svg)](https://results.pre-commit.ci/latest/github/billwallis/advent-of-code-sql/main)
 [![GitHub last commit](https://img.shields.io/github/last-commit/billwallis/advent-of-code-sql)](https://shields.io/badges/git-hub-last-commit)
 
@@ -18,13 +17,9 @@ SQL solutions to the Advent of Code problem sets, available at:
 
 - [https://adventofcode.com/](https://adventofcode.com/)
 
-## Quick start
+## Contributing
 
-This project uses:
-
-- [uv](https://docs.astral.sh/uv/getting-started/installation/) for package management
-- [pre-commit](https://pre-commit.com/) for linting
-- [arguably](https://treykeown.github.io/arguably/) for the CLI
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/) and then install the dependencies:
 
 ```shell
 # Setup
