@@ -44,7 +44,7 @@ class Solution:
             str(module_path).replace(os.sep, "."),
             str(PROJECT_ROOT),
         )
-        self.solution = getattr(module, "solution")
+        self.solution = module.solution
 
     def solve(self, use_sample: bool) -> list[Any]:
         """
