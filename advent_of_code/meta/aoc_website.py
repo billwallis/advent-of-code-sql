@@ -32,10 +32,10 @@ def _parse_year_and_day(path: pathlib.Path) -> tuple[int, int]:
         day = path.parent.name
         year = path.parent.parent.name
         return int(year[-4:]), int(day[-2:])
-    except ValueError:
+    except ValueError as err:
         raise ValueError(
             f"Path '{path}' is not in the form '.../year_0000/day_00/file.ext'."
-        )
+        ) from err
 
 
 def read_input(path: pathlib.Path) -> str:

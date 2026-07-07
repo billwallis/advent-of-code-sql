@@ -11,7 +11,7 @@ from advent_of_code import Solution
 from advent_of_code.constants import SOLUTIONS_ROOT
 
 # year-XXXX: day-XX: part-X: sample/actual: value
-Solutions: TypeAlias = dict[str, dict[str, dict[str, dict[str, Any]]]]
+type Solutions = dict[str, dict[str, dict[str, dict[str, Any]]]]
 
 
 def _parse_date_key(date_string: str) -> int:

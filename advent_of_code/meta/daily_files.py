@@ -20,7 +20,7 @@ class FileCreator:
     year: int
     directory: pathlib.Path
 
-    def __init__(self, day: int, year: int):
+    def __init__(self, day: int, year: int) -> None:
         self.day = day
         self.year = year
         self.directory = SOLUTIONS_ROOT / f"year_{year}/day_{day:02d}"
