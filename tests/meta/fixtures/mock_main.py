@@ -31,6 +31,6 @@ def solution(use_sample: bool) -> list:
     part_2 = _read("part-2.sql").replace("{{ file }}", str(file.absolute()))
 
     return [
-        duckdb.sql(part_1).fetchone()[0],
-        duckdb.sql(part_2).fetchone()[0],
+        duckdb.sql(part_1).fetchall()[0][0],
+        duckdb.sql(part_2).fetchall()[0][0],
     ]

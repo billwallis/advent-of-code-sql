@@ -2,7 +2,7 @@
 ---
 ci:
   autoupdate_schedule: quarterly
-  skip: ["identity", "uv-lock"]
+  skip: ["identity"]
 
 exclude: .*/(input|sample).*\.data
 
@@ -19,6 +19,7 @@ repos:
       - id: trailing-whitespace
       - id: end-of-file-fixer
       - id: mixed-line-ending
+        args: ["--fix", "lf"]
       - id: check-added-large-files
       - id: check-json
       - id: check-yaml
@@ -26,34 +27,39 @@ repos:
       - id: check-ast
       - id: detect-private-key
 
+  - repo: https://github.com/pre-commit/pre-commit
+    rev: v4.7.0
+    hooks:
+      - id: validate_manifest
+
   - repo: https://github.com/pre-commit-ci/pre-commit-ci-config
     rev: v1.6.1
     hooks:
       - id: check-pre-commit-ci-config
 
-  - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.12.23
-    hooks:
-      - id: uv-lock
-
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.16.10
-    hooks:
-      - id: ruff-check
-        args: ["--fix"]
-        exclude: "advent_of_code/meta/template/main.py"
-      - id: ruff-format
-        exclude: "advent_of_code/meta/template/main.py"
-
   - repo: https://github.com/billwallis/bills-hooks
-    rev: v0.0.16
+    rev: v0.0.18
     hooks:
       - id: banned-python-code
+      - id: check-github-codeowners
       - id: check-no-commit-comment
       - id: tidy-gitkeep
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.38.2
+    rev: 0.39.0
     hooks:
       - id: check-github-workflows
       - id: check-compose-spec
+
+  - repo: local
+    hooks:
+      - id: check-pyproject
+        name: Validate pyproject.toml schema
+        entry: check-jsonschema
+        args: ["--schemafile", "https://json.schemastore.org/pyproject.json"]
+        files: pyproject.toml
+        pass_filenames: true
+        language: python
+        additional_dependencies: ["check-jsonschema==0.39.0"]
+        # This calls a remote URL, so run on pre-push to avoid slowing down commits
+        stages: ["pre-push"]
