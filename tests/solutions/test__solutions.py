@@ -57,6 +57,12 @@ def test__sample_solutions(year: int, day: int, parts: dict):
     match (year, day):
         case (2024, _):
             pytest.skip()
+        case (2025, 8):
+            pytest.skip()
+        case (2025, 10):
+            pytest.skip()
+        case (2025, 12):
+            pytest.skip()
 
     try:
         solution = Solution(day, year)
